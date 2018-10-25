@@ -2,7 +2,6 @@
 
 namespace OwowAgency\UserRemoval\Http\Rules;
 
-use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Contracts\Validation\Rule;
 
@@ -21,9 +20,9 @@ class ComparePassword implements Rule
      * @param  \Illuminate\Foundation\Auth\User  $user
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct()
     {
-        $this->user = $user;
+        $this->user = currentUser();
     }
 
     /**

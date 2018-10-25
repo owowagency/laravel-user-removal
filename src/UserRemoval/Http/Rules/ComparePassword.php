@@ -9,12 +9,15 @@ class ComparePassword implements Rule
 {
     /**
      * The user to check the password for.
+     *
+     * @var \Illuminate\Foundation\Auth\User
      */
     private $user;
 
     /**
      * Create a new rule instance.
      *
+     * @param  \Illuminate\Foundation\Auth\User  $user
      * @return void
      */
     public function __construct()

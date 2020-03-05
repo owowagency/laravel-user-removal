@@ -20,9 +20,9 @@ class ComparePassword implements Rule
      * @param  \Illuminate\Foundation\Auth\User  $user
      * @return void
      */
-    public function __construct()
+    public function __construct($user)
     {
-        $this->user = currentUser();
+        $this->user = $user ?? currentUser();
     }
 
     /**
